@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agente-obsidian"
+version = "0.1.0"
+description = "Agente de IA (Claude) com acesso ao Obsidian via MCP/streamable HTTP"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=0.40",
+    "mcp>=1.0",
+]
+
+[project.scripts]
+agente-obsidian = "agente_obsidian.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
